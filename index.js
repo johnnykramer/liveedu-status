@@ -7,6 +7,10 @@ function username(username) {
   let userlink = `https://liveedu.tv/${username}/profile`;
   let nodes;
   return new Promise((resolve, reject) => {
+    if (!username || username == '') {
+      status = 'error';
+      resolve(status)
+    }
     request(userlink, function (error, response, body) {
       const dom = parser.parseFromString(body);
       nodes = dom.getElementsByClassName('live');

@@ -8,6 +8,6 @@
       const status = require('liveedu-status');
     
       status.username('johnnykramer')
-        .then(() => {
+        .then((status) => {
           console.log(status)
         })
