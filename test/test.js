@@ -1,10 +1,10 @@
 const status = require('../index');
 const mocha = require('mocha');
-const assert = require('assert');
+const fs = require('fs');
 
 describe('STATUS', function() {
   it('should return status corectly', function(done) {
-    this.timeout(30000);
+    this.timeout(10000);
     let user = 'redironlabs';
     status.username(user)
       .then((status) => {
@@ -16,7 +16,7 @@ describe('STATUS', function() {
       })
   }),
   it('should return string', function(done) {
-    this.timeout(15000);
+    this.timeout(10000);
     let user = 'johnnykramer';
     status.username(user)
       .then((status) => {
@@ -28,7 +28,7 @@ describe('STATUS', function() {
       })
   }),
   it('should return error if empty username', function(done) {
-    this.timeout(30000);
+    this.timeout(10000);
     let user = '';
     status.username(user)
       .then((status) => {

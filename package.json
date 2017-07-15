@@ -11,11 +11,12 @@
     "name": "Petro Kuzmychev",
     "email": "kuzmychev@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dom-parser": "^0.1.5",
-    "lodash": "^4.17.4",
-    "mocha": "^1.21.5",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.5"
   }
 }

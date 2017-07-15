@@ -1,5 +1,4 @@
 const request = require('request');
-const _ = require('lodash');
 const domParser = require('dom-parser');
 const parser = new domParser();
 
@@ -14,7 +13,7 @@ function username(username) {
     request(userlink, function (error, response, body) {
       const dom = parser.parseFromString(body);
       nodes = dom.getElementsByClassName('live');
-      if (_.isEmpty(nodes)) {
+      if (!nodes || nodes == '') {
         status = 'offline';
         resolve(status);
       }
